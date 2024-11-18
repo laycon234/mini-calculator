@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <title>Document</title>
+    <style>
+ .buts{
+        left: 25%;
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="mt-3 d-flex allign-items-center justify-content-center">
+        <main class="w-25 container pt-5 d-grid text-center bg-success pb-4 rounded-4 all">
+            <div class="d-flex allign-items-stretch w-100 m-2 position-relative justify-content-center row">
+                <input type="number" id="inp1" class="w-50 mt-2 mx-4" name="" id="myinput">
+
+                <input type="number" id="inp2" class="w-50 mt-2 mx-4" name="" id="myinput">
+                <h1 class="fs-1 mt-3 mx-2">&equals;
+                </h1>
+
+                <div id="inside" class="w-50 h-25 pt-2 bg-danger text-center position-sticky fw-4 ans rounded-4">0
+                </div>
+            </div>
+            <div class="mt-5 m-auto w-50 row px-3 m-1 position-absolute top-50 buts">
+                <button onclick="add()" id="plus" class="btn m-1 col bg-primary text-light px-5 py-3">&plus;</button>
+                <button onclick="sub()"  class="btn m-1 col bg-primary text-light px-5 py-3">&minus;</button>
+                <button onclick="mult()"  class="btn m-1 col bg-primary text-light px-5 py-3">&times;</button>
+                <button onclick="div()"  class="btn m-1 col bg-primary text-light px-5 py-3">&divide;</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+<script>
+    function add(){
+        let num1 = document.getElementById("inp1").value
+        let num2 = document.getElementById("inp2").value
+        let result = Number(num1) + Number(num2)
+        document.getElementById("inside").innerHTML = result;
+    }
+
+    function sub(){
+        let num1 = document.getElementById("inp1").value
+        let num2 = document.getElementById("inp2").value
+        let result = Number(num1) - Number(num2)
+        document.getElementById("inside").innerHTML = result;
+    }
+
+    function mult(){
+        let num1 = document.getElementById("inp1").value
+        let num2 = document.getElementById("inp2").value
+        let result = Number(num1) * Number(num2)
+        document.getElementById("inside").innerHTML = result;
+    }
+
+    function div(){
+        let num1 = document.getElementById("inp1").value
+        let num2 = document.getElementById("inp2").value
+        let result = Number(num1) / Number(num2)
+        document.getElementById("inside").innerHTML = result;
+    }
+</script>
